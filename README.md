@@ -141,5 +141,11 @@ print(response.text)
 **ghost_man_evil@126.com**
 **w_|_x: tinalee_muzi**
 
+❗ ❗ ❗注意❗ ❗ ❗
+
+**1、欢迎论文or项目合作**
+**2、毕业设计/课程设计 远程帮助需要收费**
+
+
 ![小城生活-30](https://user-images.githubusercontent.com/112738714/229260608-498a7c6a-70cb-4995-9d04-6f307ba24d24.jpg)
 
