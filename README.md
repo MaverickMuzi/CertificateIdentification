@@ -115,7 +115,29 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 print(response.text)
 ```
 
+## 车牌识别
+![7a9d7d014d8446232b1de5b89a689a96](https://user-images.githubusercontent.com/112738714/229269469-62935cda-c29d-451b-bda0-d0b5d1767ad6.jpeg)
 
+```python
+import requests
+
+url = "https://frp-cup.top:63320/predict"
+
+payload={'nMsgType': '200',
+'sU': 'hello_verify',
+'sP': 'hello_verify',
+'sS': '0',
+'Category': '0',
+'SubCategory': '0'}
+files=[
+  ('image',('2fd.jpeg',open('车牌图片.jpeg','rb'),'image/jpeg'))
+]
+headers = {}
+
+response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+print(response.text)
+```
 **ghost_man_evil@126.com**
 **w_|_x: tinalee_muzi**
 
