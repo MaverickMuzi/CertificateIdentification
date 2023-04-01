@@ -92,6 +92,30 @@ print(response.text)
 
 目前携程验证码的识别率平均能达到 95+%，欢迎大家技术交流、使用，可以加邮箱、或者微信
 
+## 身份证识别
+![v2-83751f78d2f781854766bd030e2bd5bf_1440w](https://user-images.githubusercontent.com/112738714/229268471-b9f02acc-cd5f-43f9-a6e8-87ba60b10d65.jpg)
+```python
+import requests
+
+url = "https://frp-cup.top:63320/predict"
+
+payload={'nMsgType': '200',
+'sU': 'hello_verify',
+'sP': 'hello_verify',
+'sS': '0',
+'Category': '200',
+'SubCategory': '0'}
+files=[
+  ('image',('1440w.jpg',open('身份证图片.jpg','rb'),'image/jpeg'))
+]
+headers = {}
+
+response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+print(response.text)
+```
+
+
 **ghost_man_evil@126.com**
 **w_|_x: tinalee_muzi**
 
