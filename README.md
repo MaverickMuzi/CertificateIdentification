@@ -35,6 +35,31 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 print(response.text)
 ```
 
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+  .addFormDataPart("nMsgType","200")
+  .addFormDataPart("sU","hello_verify")
+  .addFormDataPart("sP","hello_verify")
+  .addFormDataPart("sS","0")
+  .addFormDataPart("Category","100")
+  .addFormDataPart("SubCategory","0")
+  .addFormDataPart("img_upper","0_0.png",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("前面小图片.png")))
+  .addFormDataPart("img_bottom","0_1.png",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("后面大图片.png")))
+  .build();
+Request request = new Request.Builder()
+  .url("https://frp-cup.top:63320/predict")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
+```
+
 
 #### 形状点选验证码
 ![227715190-02bcb9e3-85e0-4612-9f4a-a51345263033](https://user-images.githubusercontent.com/112738714/229259904-03db8276-8c7b-4bdb-9b77-cf61fa4709aa.png)
@@ -60,6 +85,31 @@ headers = {}
 response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
 print(response.text)
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+  .addFormDataPart("nMsgType","200")
+  .addFormDataPart("sU","hello_verify")
+  .addFormDataPart("sP","hello_verify")
+  .addFormDataPart("sS","0")
+  .addFormDataPart("Category","100")
+  .addFormDataPart("SubCategory","898")
+  .addFormDataPart("img_upper","0_0.png",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("前面小图片.png")))
+  .addFormDataPart("img_bottom","0_1.png",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("后面大图片.png")))
+  .build();
+Request request = new Request.Builder()
+  .url("https://frp-cup.top:63320/predict")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
 ```
 
 #### 文字点选验证码
@@ -89,6 +139,30 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 print(response.text)
 ```
 
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+  .addFormDataPart("nMsgType","200")
+  .addFormDataPart("sU","hello_verify")
+  .addFormDataPart("sP","hello_verify")
+  .addFormDataPart("sS","0")
+  .addFormDataPart("Category","100")
+  .addFormDataPart("SubCategory","989")
+  .addFormDataPart("img_upper","0_0.png",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("前面小图片.png")))
+  .addFormDataPart("img_bottom","0_1.png",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("后面大图片.png")))
+  .build();
+Request request = new Request.Builder()
+  .url("https://frp-cup.top:63320/predict")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
+```
 
 目前携程验证码的识别率平均能达到 95+%，欢迎大家技术交流、使用，可以加邮箱、或者微信
 
@@ -115,6 +189,28 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 print(response.text)
 ```
 
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+  .addFormDataPart("nMsgType","200")
+  .addFormDataPart("sU","hello_verify")
+  .addFormDataPart("sP","hello_verify")
+  .addFormDataPart("sS","0")
+  .addFormDataPart("Category","200")
+  .addFormDataPart("SubCategory","0")
+  .addFormDataPart("image","1440w.jpg",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("身份证图片.jpg")))
+  .build();
+Request request = new Request.Builder()
+  .url("https://frp-cup.top:63320/predict")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
+```
+
 ## 车牌识别
 ![7a9d7d014d8446232b1de5b89a689a96](https://user-images.githubusercontent.com/112738714/229269469-62935cda-c29d-451b-bda0-d0b5d1767ad6.jpeg)
 
@@ -138,6 +234,29 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 
 print(response.text)
 ```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+  .addFormDataPart("nMsgType","200")
+  .addFormDataPart("sU","hello_verify")
+  .addFormDataPart("sP","hello_verify")
+  .addFormDataPart("sS","0")
+  .addFormDataPart("Category","0")
+  .addFormDataPart("SubCategory","0")
+  .addFormDataPart("image","2fd.jpeg",
+    RequestBody.create(MediaType.parse("application/octet-stream"),
+    new File("车牌图片.jpeg")))
+  .build();
+Request request = new Request.Builder()
+  .url("https://frp-cup.top:63320/predict")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
+```
+
 **ghost_man_evil@126.com**
 **w_|_x: tinalee_muzi**
 
